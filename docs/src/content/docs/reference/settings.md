@@ -42,9 +42,9 @@ The **About Typeward** card carries the subtitle "The installed build and how up
 | --- | --- | --- |
 | **Version** | Read-only | The version of the build you are running. |
 | **Check for updates** | Read-only | **Check now** looks for a newer release immediately. The hint is exact: "Look for a newer release right now. This is a plain HTTPS request to GitHub; no identifiers are sent." The button reads "Checking…" while it runs. |
-| **Check automatically** | On | "Shortly after launch, look for a newer release and prompt you to install it. The check is a plain HTTPS GET to GitHub with no identifiers, and updates never install without your confirmation." Once builds are signed, that check will run about ten seconds after launch. |
+| **Check automatically** | On | "Shortly after launch, look for a newer release and prompt you to install it. The check is a plain HTTPS GET to GitHub with no identifiers, and updates never install without your confirmation." The check runs about ten seconds after launch. |
 
-This build ships without an update signing key, so the updater is dormant. The automatic check does nothing, and **Check now** answers with a toast: "Updates aren't configured yet. This build predates automatic updates. Grab new versions from the Typeward download page." You install new versions by hand from the [Typeward releases page](https://github.com/typeward/releases/releases). See [Updates](/reference/updates/).
+Release builds carry an update signing key, so both controls are live: a newer release raises the **Update available** dialog, and nothing installs until you confirm it. You can also install new versions by hand from the [Typeward releases page](https://github.com/typeward/typeward/releases). A build made without the signing key, such as your own build from source, keeps the updater dormant and answers **Check now** with an information toast reading **Updates aren't configured yet**. See [How updates work](/reference/updates/).
 
 ## General
 

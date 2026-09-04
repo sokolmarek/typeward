@@ -5,7 +5,7 @@ description: "No telemetry, no crash reporting, no account, and no Typeward serv
 
 This page lists every network request Typeward can make, what starts it, and what it sends.
 
-A fresh install, opened on a machine with a live network connection, makes no network requests at all. Typeward has no account system, no backend, and no server of its own to talk to. Your files never go to Typeward, because there is no Typeward server to receive them.
+A fresh install makes one request of its own accord: the update check covered under [Update checks](#update-checks), which runs about ten seconds after launch while **Check automatically** is on. Turning that toggle off leaves a fresh install making no network requests at all. Nothing else reaches the network until you configure a feature that uses it. Typeward has no account system, no backend, and no server of its own to talk to. Your files never go to Typeward, because there is no Typeward server to receive them.
 
 Typeward has none of the following.
 
@@ -13,9 +13,9 @@ Typeward has none of the following.
 | --- | --- |
 | Telemetry and analytics | There is no usage tracking, no event pipeline, no install identifier, and no third-party SDK for any of it. |
 | Crash reporting | The crash-submission path, the panic log, and their **Settings** section were removed on 2026-08-13. When something fails, Typeward writes a line to the developer console and shows a toast. Nothing is written to disk, and nothing is transmitted. |
-| An account | There is nothing to sign in to. See [Open source and licensing](/reference/open-source/). |
-| Update pings | The auto-updater is dormant in every shipped build, so no update request is ever made. See [Update checks](#update-checks). |
-| A feedback endpoint | There is no in-app feedback form and no bug-report submitter. You file an issue yourself at [the Typeward app repository](https://github.com/typeward/app). |
+| An account | There is nothing to sign in to. See [License and third-party components](/reference/license/). |
+| An install or device identifier | Nothing identifies your copy of Typeward. The update check is the only request Typeward starts on its own, and it carries no identifier. See [Update checks](#update-checks). |
+| A feedback endpoint | There is no in-app feedback form and no bug-report submitter. You file an issue yourself at [the Typeward repository](https://github.com/typeward/typeward). |
 
 ## Outbound requests
 
@@ -33,7 +33,7 @@ Every feature in this table is off, or unconfigured, until you set it up. Your f
 | Cloud sync | The WebDAV server you connected, and only that one | Off until you add a server under **Settings → Integrations → Cloud storage**. Then, while a cloud-backed project is open, a pull runs when it opens and every 60 seconds after. A push follows about 1.5 seconds after a save. | Project file contents in both directions, plus HTTP Basic credentials for that server. Never the project's `.typeward` folder, and never your settings. |
 | Git | The HTTPS remote you configured (`github.com`, `git.overleaf.com`, GitLab, a self-hosted host) | Only when you clone, fetch, pull, or push | Repository contents, and whatever credential your own git credential helper hands over for that host. Typeward stores no git credentials. |
 | Tectonic package fetches | Tectonic's own package bundle | Only when you compile with the Tectonic engine and it needs a package it has not cached | A package request from the Tectonic subprocess. Nothing about your files. |
-| Update check | `github.com` | Never in any shipped build | Nothing. The updater is dormant. |
+| Update check | `github.com` | About ten seconds after launch while **Check automatically** is on, and whenever you select **Check now**. | Nothing beyond the request itself. No account, no install identifier, no version report. |
 
 Each of those features has a page that covers its setup and behavior in full: [How references work](/references/how-references-work/), [Connecting Zotero, Mendeley, and DOI lookup](/references/connecting-reference-managers/), [Cloud sync with WebDAV](/projects/cloud-sync/), and [Git in Typeward](/projects/git/).
 
@@ -43,9 +43,11 @@ Typeward can also hand an address to your default browser, which is a handoff to
 
 ## Update checks
 
-No shipped build checks for updates. The updater has no signing key configured, so the startup check does nothing. In **Settings → About → Check for updates**, selecting **Check now** shows a toast. It reads **Updates aren't configured yet**, with the body **This build predates automatic updates. Grab new versions from the Typeward download page.** No request leaves the machine when you select it.
+The update check is the only request Typeward starts without you asking. It is a plain HTTPS `GET` of `latest.json`, a manifest attached to the newest release in the `typeward/typeward` repository on GitHub. It carries no identifier of any kind: no account, no install id, and no report of the version you are on. GitHub sees a download of a public file, as it would for anyone fetching that address.
 
-The **Check automatically** toggle in the same section is on by default and controls nothing. If update signing is configured, the check becomes a plain HTTPS GET of a release manifest on GitHub, about ten seconds after launch, carrying no identifier of any kind. Typeward will ask before downloading or installing anything. New versions come from [the Typeward releases page](https://github.com/typeward/releases/releases). See [How updates work](/reference/updates/).
+The check runs about ten seconds after launch while **Check automatically** is on, which is the default, and it runs on demand whenever you select **Check now** under **Settings → About → Check for updates**. Turning **Check automatically** off stops the launch check, and the toggle is stored locally with the rest of your preferences.
+
+Finding a newer release downloads nothing. Typeward raises the **Update available** dialog and waits, and the download starts only when you select **Install and relaunch**. New versions are also available by hand from [the Typeward releases page](https://github.com/typeward/typeward/releases). See [How updates work](/reference/updates/).
 
 ## What an AI request contains
 
@@ -165,7 +167,7 @@ Removing a credential means disconnecting that integration in **Settings**, whic
 ## See also
 
 - [Data locations, credentials, and uninstall](/reference/data-locations/)
-- [Open source and licensing](/reference/open-source/)
+- [License and third-party components](/reference/license/)
 - [How updates work](/reference/updates/)
 - [AI assistant](/ai/overview/)
 - [Cloud sync with WebDAV](/projects/cloud-sync/)

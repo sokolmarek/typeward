@@ -16,7 +16,7 @@ Two switches control Harper, and both write the same setting. Turning on either 
 
 While both switches are off, no grammar UI appears anywhere in the app and the engine never runs. Turning it on installs nothing, starts no background service, and starts no language server.
 
-Harper is a vendored copy of `harper-core`, an Apache-2.0 licensed Rust crate. Typeward compiles it into its own binary and runs it in the same process as the rest of the app. There is no grammar service, no cloud API, and no request of any kind, so checking behaves identically with the machine offline.
+Harper is a set of Apache-2.0 licensed Rust crates, `harper-core` along with `harper-tex` and `harper-typst`, resolved from the crate registry at build time. Typeward compiles them into its own binary and runs the engine in the same process as the rest of the app. There is no grammar service, no cloud API, and no request of any kind, so checking behaves identically with the machine offline.
 
 The **Grammar** card holds the remaining options: the dialect, the personal dictionary, and the ignored suggestions. They appear under the **Harper** row once the switch is on.
 
@@ -126,4 +126,4 @@ If no underlines appear, work down this ladder:
 
 - [Editor overview](/editor/overview/)
 - [Privacy and network behavior](/reference/privacy-and-network/)
-- [Open source and licensing](/reference/open-source/)
+- [License and third-party components](/reference/license/)

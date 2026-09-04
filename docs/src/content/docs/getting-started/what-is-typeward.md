@@ -38,9 +38,9 @@ Optional integrations use your own credentials. Zotero, Mendeley, a WebDAV serve
 
 ## Open source
 
-Typeward is free software, licensed GPL-3.0-or-later. The source lives in the [Typeward app repository](https://github.com/typeward/app), and Typeward publishes installers for Windows, macOS, and Linux on [GitHub releases](https://github.com/typeward/releases/releases). You can also build the app yourself. See [Build from source](/getting-started/build-from-source/).
+Typeward is licensed under the MIT License with the Commons Clause condition. You may use it for anything including commercial work, read the source, modify it, fork it, and redistribute it free of charge. The one right the clause withholds is selling Typeward itself. The source, the issue tracker, and the installers for Windows, macOS, and Linux all live in the [Typeward repository](https://github.com/typeward/typeward), and the current release is [v0.1.0](https://github.com/typeward/typeward/releases), published as a first public beta. You can also build the app yourself. See [Build from source](/getting-started/build-from-source/).
 
-For the license, the third-party notices, and how to contribute, see [Open source and licensing](/reference/open-source/).
+For the license, the third-party notices, and how to contribute, see [License and third-party components](/reference/license/).
 
 ## Features in every build
 
@@ -101,6 +101,6 @@ Every feature these docs describe ships in the build you downloaded. These are t
 - [Editor overview](/editor/overview/)
 - [Privacy and network behavior](/reference/privacy-and-network/)
 - [Data locations, credentials, and uninstall](/reference/data-locations/)
-- [Open source and licensing](/reference/open-source/)
+- [License and third-party components](/reference/license/)
 - [Troubleshooting](/troubleshooting/troubleshooting/)
 - [FAQ](/troubleshooting/faq/)

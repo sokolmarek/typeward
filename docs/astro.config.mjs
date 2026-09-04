@@ -8,9 +8,12 @@ export default defineConfig({
 	site: 'https://docs.typeward.com',
 	// Pages removed in the open-source overhaul: settings sync via account no
 	// longer exists (cloud sync replaced it) and there are no tiers to compare.
+	// The licensing page moved with the v0.1.0 relicense (GPL-3.0-or-later to
+	// MIT with the Commons Clause), so its old slug redirects to the new one.
 	redirects: {
 		'/account/settings-sync/': '/projects/cloud-sync/',
-		'/reference/free-vs-pro/': '/reference/open-source/',
+		'/reference/free-vs-pro/': '/reference/license/',
+		'/reference/open-source/': '/reference/license/',
 	},
 	// Every screenshot is a 2880px-wide 2x capture that never renders wider than
 	// about 880 CSS px. Constrained layout makes Astro emit a srcset so a phone
@@ -22,7 +25,7 @@ export default defineConfig({
 	integrations: [
 		starlight({
 			title: 'Typeward Docs',
-			// The brand mark from app/design_files/icon-kit, background-free: the
+			// The brand mark from typeward/design_files/icon-kit, background-free: the
 			// header has a background of its own, and the tiled build would sit a
 			// second surface on top of it. Light and dark are separate artworks
 			// rather than an inversion -- the light one deepens the amber so the
@@ -194,7 +197,7 @@ export default defineConfig({
 						{ label: 'Data locations, credentials, and uninstall', slug: 'reference/data-locations' },
 						{ label: 'Privacy and network behavior', slug: 'reference/privacy-and-network' },
 						{ label: 'How updates work', slug: 'reference/updates' },
-						{ label: 'Open source and licensing', slug: 'reference/open-source' },
+						{ label: 'License and third-party components', slug: 'reference/license' },
 						{ label: 'Glossary', slug: 'reference/glossary' },
 					],
 				},

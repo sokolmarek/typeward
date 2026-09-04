@@ -18,22 +18,22 @@ This guide installs Typeward on Linux from the AppImage, the `.deb`, or the `.rp
 
 Every release attaches three package formats, each built for x86_64 and for ARM64. Pick the one your distribution uses.
 
-| Package | Distributions | Stable file name |
-| --- | --- | --- |
-| AppImage | Most distributions, with nothing to install | `Typeward-linux-x86_64.AppImage`, or `Typeward-linux-aarch64.AppImage` on ARM64 |
-| `.deb` | Debian, Ubuntu, and derivatives | `Typeward-linux-amd64.deb`, or `Typeward-linux-arm64.deb` on ARM64 |
-| `.rpm` | Fedora, openSUSE, and other RPM-based distributions | None, so download the `.rpm` under its versioned name |
+| Package | Distributions | File name on x86_64 | File name on ARM64 |
+| --- | --- | --- | --- |
+| AppImage | Anything at or above the glibc floor, with nothing to install, Arch and other rolling releases included | `Typeward_<version>_amd64.AppImage` | `Typeward_<version>_aarch64.AppImage` |
+| `.deb` | The Debian family: Debian 12 and newer, Ubuntu 22.04 and newer, Mint, Pop!_OS, elementary | `Typeward_<version>_amd64.deb` | `Typeward_<version>_arm64.deb` |
+| `.rpm` | The RPM family: Fedora 36 and newer, openSUSE, the RHEL derivatives | `Typeward-<version>-1.x86_64.rpm` | `Typeward-<version>-1.aarch64.rpm` |
 
-Every package is also attached under its versioned file name, such as `Typeward_<version>_amd64.deb`, so a link to a particular release keeps working after a newer one is published.
+Every asset carries the release number in its file name, so `<version>` throughout this page stands for that number, for example `0.1.0`. Linux is one build per architecture rather than one per distribution, and the `.rpm` name uses hyphens and a release suffix where the other two use underscores.
 
-1. On the [Typeward releases page](https://github.com/typeward/releases/releases), download the package for your distribution and architecture.
+1. On the [Typeward releases page](https://github.com/typeward/typeward/releases), download the package for your distribution and architecture.
 2. Verify the file with the checksum and provenance checks in [Verify your download](#verify-your-download).
 3. Install the package with the steps for its format: [Run the AppImage](#run-the-appimage), [Install the Debian package](#install-the-debian-package), or [Install the RPM package](#install-the-rpm-package).
 
 ### Run the AppImage
 
-1. Make the file executable with `chmod +x Typeward-linux-x86_64.AppImage`.
-2. Start Typeward with `./Typeward-linux-x86_64.AppImage`.
+1. Make the file executable with `chmod +x Typeward_<version>_amd64.AppImage`.
+2. Start Typeward with `./Typeward_<version>_amd64.AppImage`.
 
 The AppImage is self-contained and runs from wherever you put it. It installs no desktop entry and registers no file types.
 
@@ -42,18 +42,18 @@ The AppImage is self-contained and runs from wherever you put it. It installs no
 Install the package with apt, which resolves the dependencies the package declares on WebKitGTK, GTK, and D-Bus:
 
 ```sh
-sudo apt install ./Typeward-linux-amd64.deb
+sudo apt install ./Typeward_<version>_amd64.deb
 ```
 
 ### Install the RPM package
 
-Install the versioned `.rpm` with your package manager:
+Install the `.rpm` with your package manager:
 
 ```sh
-sudo dnf install ./<file>.rpm
+sudo dnf install ./Typeward-<version>-1.x86_64.rpm
 ```
 
-On openSUSE, use `sudo zypper install ./<file>.rpm`. If your package manager reports a missing WebKitGTK, install your distribution's WebKitGTK 4.1 package and run the command again.
+On openSUSE, use `sudo zypper install` with the same file name. If your package manager reports a missing WebKitGTK, install your distribution's WebKitGTK 4.1 package and run the command again.
 
 ### Set Typeward as the default editor
 
@@ -73,12 +73,12 @@ If a file fails, delete it and download it again. Never run it.
 Each asset also carries a GitHub build-provenance attestation. With the [GitHub CLI](https://cli.github.com/) installed, this command confirms the file came out of the release workflow in the Typeward source repository:
 
 ```sh
-gh attestation verify Typeward-linux-x86_64.AppImage --repo typeward/app
+gh attestation verify Typeward_<version>_amd64.AppImage --repo typeward/typeward
 ```
 
 ## Unsigned packages
 
-Typeward packages are not signed, so the checksum and the attestation are what establish that a file is the one that was released. [Open source and licensing](/reference/open-source/) explains why the builds are unsigned. Every release repeats both checks in a "Verify your download" section of its release notes, and a release that goes out unsigned says so there as well.
+Typeward packages are not signed, so the checksum and the attestation are what establish that a file is the one that was released. [License and third-party components](/reference/license/) explains why the builds are unsigned. Every release repeats both checks in a "Verify your download" section of its release notes, alongside a section on code signing. The updater signature is a separate mechanism, and every release does carry that. See [How updates work](/reference/updates/).
 
 ## Check that it worked
 
@@ -107,11 +107,11 @@ The keyring may ask you to unlock it the first time Typeward stores or uses a cr
 
 ## Updating
 
-Current builds do not update themselves. The built-in updater is dormant, and a manual check under **Settings → About** shows the toast **Updates aren't configured yet**.
+Typeward checks for updates on its own. About ten seconds after launch, a release build looks for a newer version and raises the **Update available** dialog if it finds one. Nothing downloads until you select **Install and relaunch**, and you can turn the launch check off with **Check automatically** under **Settings → About**. A release publishes one signed package per format, so an AppImage updates from an AppImage, a `.deb` from a `.deb`, and an `.rpm` from an `.rpm`.
 
-To update:
+To update by hand instead:
 
-1. Download the newer package from the [Typeward releases page](https://github.com/typeward/releases/releases).
+1. Download the newer package from the [Typeward releases page](https://github.com/typeward/typeward/releases).
 2. Install it the way you installed the first one.
 
 Apt and your RPM package manager upgrade the existing install in place, and an AppImage takes the update when you overwrite the file. Your projects, settings, and version history are untouched by any of this. See [How updates work](/reference/updates/).

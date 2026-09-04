@@ -281,7 +281,7 @@ Nothing about the crash is recorded or transmitted. Typeward has no crash report
 
 ## Still stuck
 
-Open an issue at [github.com/typeward/app/issues](https://github.com/typeward/app/issues). Typeward sends nothing on its own, so this is something you write in your browser, and you decide exactly what goes in it.
+Open an issue at [github.com/typeward/typeward/issues](https://github.com/typeward/typeward/issues). Typeward sends nothing on its own, so this is something you write in your browser, and you decide exactly what goes in it.
 
 Collect these first:
 
@@ -290,4 +290,4 @@ Collect these first:
 - The compile engine you use
 - The part of the **All logs** tab that covers the failure
 
-A short file that reproduces the problem helps more than a long description of one. The source you are filing against is described in [Open source and licensing](/reference/open-source/).
+A short file that reproduces the problem helps more than a long description of one. The source you are filing against is described in [License and third-party components](/reference/license/).

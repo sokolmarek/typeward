@@ -2,7 +2,7 @@
 // app's real frontend (vite dev server, port 1420) in headless Chromium with
 // the IPC mock from ./mock.js injected. No changes to the app repo.
 //
-// Prereqs: app dev server running (npm run dev in ../app), playwright
+// Prereqs: app dev server running (npm run dev in ../typeward), playwright
 // available (see README.md). Run: node scripts/screens/capture.mjs
 // Output: scripts/screens/out/*.png, *.webm, boxes.json -- review, then copy
 // the keepers into src/assets/screens/ and public/videos/.

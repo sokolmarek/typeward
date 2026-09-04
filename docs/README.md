@@ -1,6 +1,6 @@
 # Typeward Docs
 
-Documentation site for [Typeward](https://typeward.com), the open-source LaTeX and Typst editor ([source](https://github.com/typeward/app), GPL-3.0-or-later). Built with [Astro Starlight](https://starlight.astro.build). Deployed to https://docs.typeward.com via GitHub Pages on every push to `main`.
+Documentation site for [Typeward](https://typeward.com), the open-source LaTeX and Typst editor ([source and releases](https://github.com/typeward/typeward), MIT with the Commons Clause). Built with [Astro Starlight](https://starlight.astro.build). Deployed to https://docs.typeward.com via GitHub Pages on every push to `main`.
 
 ## Working on the docs
 

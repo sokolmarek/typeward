@@ -7,7 +7,7 @@ This page gives short answers to the questions that come up most often about Typ
 
 ## Is Typeward free?
 
-Yes, and it is open source. Typeward is licensed GPL-3.0-or-later, and the code lives in the [Typeward source repository](https://github.com/typeward/app). There is no paid tier, no editions, and no feature gates: every feature ships in every build for every user. See [Open source and licensing](/reference/open-source/).
+Yes, and it is open source. Typeward is licensed under the MIT License with the Commons Clause, and the code lives in the [Typeward source repository](https://github.com/typeward/typeward). You may use, modify, fork, and redistribute it at no cost, and the one thing the clause withholds is selling Typeward itself. There is no paid tier, no editions, and no feature gates: every feature ships in every build for every user. See [License and third-party components](/reference/license/).
 
 ## Do I need to install LaTeX?
 
@@ -71,12 +71,12 @@ No. Typeward ships desktop builds for Windows, macOS, and Linux, and no tablet o
 
 ## How do I update Typeward?
 
-Download the newer installer from the [Typeward releases page](https://github.com/typeward/releases/releases), then install it the way you installed the current version. The built-in updater is present but dormant: no shipped build makes an update request, and **Check now** under **Settings → About** reports **Updates aren't configured yet**. See [How updates work](/reference/updates/).
+Typeward can do it for you. A release build looks for a newer version about ten seconds after launch and raises the **Update available** dialog if it finds one, and nothing downloads until you select **Install and relaunch**. **Check now** under **Settings → About** runs the same check on demand. To update by hand instead, download the newer installer from the [Typeward releases page](https://github.com/typeward/typeward/releases) and install it the way you installed the current version. See [How updates work](/reference/updates/).
 
 ## Why does Windows or macOS warn me when I install Typeward?
 
-Because the builds are unsigned, and SmartScreen and Gatekeeper warn about any installer without a certificate. Unsigned releases say so in their own release notes. Every release attaches a `SHA256SUMS` file so you can check what you downloaded, and every asset carries a GitHub build provenance attestation. See [Install on Windows](/getting-started/install-windows/), [Install on macOS](/getting-started/install-macos/), or [Install on Linux](/getting-started/install-linux/).
+Because the installers carry no code signing certificate, and SmartScreen and Gatekeeper warn about any installer without one. Each release says so in its own notes. Operating-system code signing is separate from the updater signature, which every release does carry. Every release attaches a `SHA256SUMS` file so you can check what you downloaded, and every asset carries a GitHub build provenance attestation. See [Install on Windows](/getting-started/install-windows/), [Install on macOS](/getting-started/install-macos/), or [Install on Linux](/getting-started/install-linux/).
 
 ## Where do I report a bug?
 
-Open an issue in the [Typeward issue tracker](https://github.com/typeward/app/issues). Typeward has no in-app bug report or feedback form and sends nothing on its own, so bring the details with you. Include what you did, what happened, your operating system, the version shown under **Settings → About**, and for a compile problem the raw log from the **All logs** tab. See [Troubleshooting](/troubleshooting/troubleshooting/).
+Open an issue in the [Typeward issue tracker](https://github.com/typeward/typeward/issues). Typeward has no in-app bug report or feedback form and sends nothing on its own, so bring the details with you. Include what you did, what happened, your operating system, the version shown under **Settings → About**, and for a compile problem the raw log from the **All logs** tab. See [Troubleshooting](/troubleshooting/troubleshooting/).

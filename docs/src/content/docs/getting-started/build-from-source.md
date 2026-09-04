@@ -3,7 +3,7 @@ title: Build from source
 description: Clone the Typeward source, install the prerequisites and the required Tectonic binary, run a development build, and produce installers for your platform.
 ---
 
-This guide shows you how to build Typeward from source, run a development window, and produce installers for your platform. To run Typeward without building it, install a [published release](https://github.com/typeward/releases/releases) and follow [Install on Windows](/getting-started/install-windows/), [Install on macOS](/getting-started/install-macos/), or [Install on Linux](/getting-started/install-linux/). Build from source to audit the GPL-3.0-or-later code in the [Typeward repository](https://github.com/typeward/app), run an unreleased change, contribute a fix, or target a platform no installer covers.
+This guide shows you how to build Typeward from source, run a development window, and produce installers for your platform. To run Typeward without building it, install a [published release](https://github.com/typeward/typeward/releases) and follow [Install on Windows](/getting-started/install-windows/), [Install on macOS](/getting-started/install-macos/), or [Install on Linux](/getting-started/install-linux/). Build from source to audit the code in the [Typeward repository](https://github.com/typeward/typeward), run an unreleased change, contribute a fix, or target a platform no installer covers.
 
 ## Before you start
 
@@ -34,7 +34,7 @@ sudo apt install -y libdbus-1-dev libwebkit2gtk-4.1-dev build-essential \
 Clone the repository and change into it.
 
 ```sh
-git clone https://github.com/typeward/app.git typeward
+git clone https://github.com/typeward/typeward.git typeward
 cd typeward
 ```
 
@@ -90,7 +90,7 @@ Tauri writes the bundles under `src-tauri/target/release/bundle/`, in the format
 | macOS | A `.dmg` |
 | Linux | A `.deb`, an `.AppImage`, and an `.rpm` |
 
-A build produced this way is unsigned, like the published builds, so your operating system raises the same warning. [Open source and licensing](/reference/open-source/) explains why, and the install guide for your platform carries the steps past the prompt.
+A build produced this way is unsigned, like the published builds, so your operating system raises the same warning. [License and third-party components](/reference/license/) explains why, and the install guide for your platform carries the steps past the prompt.
 
 Typeward does not support cross-compiling for another operating system. Build each platform's bundles on that platform.
 
@@ -134,7 +134,7 @@ Typeward bundles none of these tools, and the build needs none of them.
 
 ## Contribute a change
 
-File issues and pull requests in the [Typeward repository](https://github.com/typeward/app). `CLAUDE.md` in the repository root, mirrored as `AGENTS.md`, is the architecture guide. Read its "Architecture seams" and "Security invariants" sections before touching compilation, IPC, the outbound HTTP allowlist, or anything that handles a path coming from a project.
+File issues and pull requests in the [Typeward repository](https://github.com/typeward/typeward). `CLAUDE.md` in the repository root, mirrored as `AGENTS.md`, is the architecture guide. Read its "Architecture seams" and "Security invariants" sections before touching compilation, IPC, the outbound HTTP allowlist, or anything that handles a path coming from a project.
 
 Every change must pass these checks before it lands, and CI runs all of them.
 
@@ -150,5 +150,5 @@ Two house conventions apply everywhere. Code, files, and commit messages carry n
 
 ## Next steps
 
-- [Open source and licensing](/reference/open-source/) covers the license, what the GPL gives you, and the third-party components Typeward bundles.
+- [License and third-party components](/reference/license/) covers the license, what it grants and withholds, and the third-party components Typeward bundles.
 - [Choosing a compile engine](/getting-started/compile-engines/) explains how Typeward detects your setup and when a TeX distribution beats the bundled Tectonic.
