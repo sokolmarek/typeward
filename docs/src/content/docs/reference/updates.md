@@ -40,9 +40,13 @@ A manual check always reports its outcome, unlike the silent one. **Settings →
 
 ## Installs from a .deb or .rpm package
 
-A release publishes one signed artifact per package type, and a `.deb` can only be updated by a `.deb`. The v0.1.0 manifest carries entries for the `.deb`, `.rpm`, and AppImage builds on both architectures, so an in-app update works for each of them.
+A release publishes one signed artifact per package type, and a `.deb` can only be updated by a `.deb`. The release manifest carries entries for the `.deb`, `.rpm`, and AppImage builds on both architectures, so an in-app update works for each of them.
 
 Should a release ever omit the artifact matching how you installed, a check says so rather than failing. On a copy installed from a `.deb` or `.rpm`, the message reads **Updates come from your package manager**, and it points you at installing the new version the same way or downloading it from the releases page. On any other install kind, the message reads **No update available for this build**.
+
+## Moving from v0.1.0
+
+v0.1.0 looks for updates at the project's former GitHub address, which no longer exists, so it cannot find any newer release. Install v0.1.1 by hand once, as described under [Manual installation](#manual-installation). Your projects and settings stay where they are, and from v0.1.1 on the in-app check finds new releases again.
 
 ## Manual installation
 

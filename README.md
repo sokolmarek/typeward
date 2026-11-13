@@ -33,17 +33,21 @@ use your own credentials.
 
 ## Install
 
-Version 0.1.0 is the first public beta. Grab the installer for your system, or
+Version 0.1.1 is the current public beta. Grab the installer for your system, or
 browse [all releases](https://github.com/sokolmarek/typeward/releases).
+
+Already on 0.1.0? Install 0.1.1 by hand once. 0.1.0 looks for updates at the
+project's former GitHub address, so it cannot see newer releases; from 0.1.1 on,
+in-app updates work again.
 
 | System | Architecture | Installer |
 | --- | --- | --- |
-| Windows 10 and 11 | x86_64 | [`Typeward_0.1.0_x64-setup.exe`](https://github.com/sokolmarek/typeward/releases/download/v0.1.0/Typeward_0.1.0_x64-setup.exe) |
-| Windows 10 and 11 | ARM64 | [`Typeward_0.1.0_arm64-setup.exe`](https://github.com/sokolmarek/typeward/releases/download/v0.1.0/Typeward_0.1.0_arm64-setup.exe) |
-| macOS 13.3+ | Apple Silicon | [`Typeward_0.1.0_aarch64.dmg`](https://github.com/sokolmarek/typeward/releases/download/v0.1.0/Typeward_0.1.0_aarch64.dmg) |
-| macOS 13.3+ | Intel | [`Typeward_0.1.0_x64.dmg`](https://github.com/sokolmarek/typeward/releases/download/v0.1.0/Typeward_0.1.0_x64.dmg) |
-| Linux, glibc 2.35+ | x86_64 | [`.deb`](https://github.com/sokolmarek/typeward/releases/download/v0.1.0/Typeward_0.1.0_amd64.deb), [`.rpm`](https://github.com/sokolmarek/typeward/releases/download/v0.1.0/Typeward-0.1.0-1.x86_64.rpm), [`AppImage`](https://github.com/sokolmarek/typeward/releases/download/v0.1.0/Typeward_0.1.0_amd64.AppImage) |
-| Linux, glibc 2.35+ | ARM64 | [`.deb`](https://github.com/sokolmarek/typeward/releases/download/v0.1.0/Typeward_0.1.0_arm64.deb), [`.rpm`](https://github.com/sokolmarek/typeward/releases/download/v0.1.0/Typeward-0.1.0-1.aarch64.rpm), [`AppImage`](https://github.com/sokolmarek/typeward/releases/download/v0.1.0/Typeward_0.1.0_aarch64.AppImage) |
+| Windows 10 and 11 | x86_64 | [`Typeward_0.1.1_x64-setup.exe`](https://github.com/sokolmarek/typeward/releases/download/v0.1.1/Typeward_0.1.1_x64-setup.exe) |
+| Windows 10 and 11 | ARM64 | [`Typeward_0.1.1_arm64-setup.exe`](https://github.com/sokolmarek/typeward/releases/download/v0.1.1/Typeward_0.1.1_arm64-setup.exe) |
+| macOS 13.3+ | Apple Silicon | [`Typeward_0.1.1_aarch64.dmg`](https://github.com/sokolmarek/typeward/releases/download/v0.1.1/Typeward_0.1.1_aarch64.dmg) |
+| macOS 13.3+ | Intel | [`Typeward_0.1.1_x64.dmg`](https://github.com/sokolmarek/typeward/releases/download/v0.1.1/Typeward_0.1.1_x64.dmg) |
+| Linux, glibc 2.35+ | x86_64 | [`.deb`](https://github.com/sokolmarek/typeward/releases/download/v0.1.1/Typeward_0.1.1_amd64.deb), [`.rpm`](https://github.com/sokolmarek/typeward/releases/download/v0.1.1/Typeward-0.1.1-1.x86_64.rpm), [`AppImage`](https://github.com/sokolmarek/typeward/releases/download/v0.1.1/Typeward_0.1.1_amd64.AppImage) |
+| Linux, glibc 2.35+ | ARM64 | [`.deb`](https://github.com/sokolmarek/typeward/releases/download/v0.1.1/Typeward_0.1.1_arm64.deb), [`.rpm`](https://github.com/sokolmarek/typeward/releases/download/v0.1.1/Typeward-0.1.1-1.aarch64.rpm), [`AppImage`](https://github.com/sokolmarek/typeward/releases/download/v0.1.1/Typeward_0.1.1_aarch64.AppImage) |
 
 See [Supported systems](#supported-systems) for which distributions each Linux
 package covers and for the two platform caveats (WebView2 on Windows, and no

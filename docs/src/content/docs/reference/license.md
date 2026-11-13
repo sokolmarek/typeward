@@ -50,7 +50,7 @@ One repository holds the source, the issue tracker, and the releases.
 | Source, issues, and pull requests | [github.com/sokolmarek/typeward](https://github.com/sokolmarek/typeward) |
 | Installers, release notes, and checksums | [github.com/sokolmarek/typeward/releases](https://github.com/sokolmarek/typeward/releases) |
 
-The release workflow in that repository produces every installer from a tagged commit. The current release is v0.1.0, published on 4 September 2026 and described in its notes as a first public beta.
+The release workflow in that repository produces every installer from a tagged commit. The current release is v0.1.1, a public beta published in November 2026. It follows v0.1.0, the first public beta, published on 4 September 2026.
 
 To build the application yourself rather than download it, see [Build from source](/getting-started/build-from-source/).
 
@@ -66,7 +66,7 @@ GitHub attests each asset at build time. Running `gh attestation verify <file> -
 
 - Typeward carries no Windows Authenticode signature and no Apple notarization. SmartScreen and Gatekeeper warn about the installers, and the release notes say so under a heading about code signing. Operating-system code signing is separate from the updater signature, which every release does carry. See [How updates work](/reference/updates/).
 - Merge-conflict resolution for git pulls and real-time collaboration are not implemented, and no mobile build is published. Nothing is held back for a paid tier, because Typeward has none.
-- v0.1.0 is the first build published outside the machine it was developed on, so its notes ask you to expect rough edges on other setups and to open an issue for anything you hit.
+- The 0.1 releases are the first builds published outside the machine they were developed on, so their notes ask you to expect rough edges on other setups and to open an issue for anything you hit.
 
 ## Third-party components
 
