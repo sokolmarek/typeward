@@ -119,13 +119,33 @@ jobs:
         with:
           tool: cargo-audit
 
-      # There are no advisory exceptions right now: the quick-xml 0.39 residue
-      # that wayland-scanner used to pin (RUSTSEC-2026-0194/0195) is gone, so
-      # the whole tree is on quick-xml 0.41+. Any future `--ignore` needs an
-      # owner, a review-by date and a stated exit condition in a comment here.
+      # Every `--ignore` needs an owner, a review-by date and a stated exit
+      # condition in a comment here.
+      #
+      # RUSTSEC-2026-0367 / 0368 / 0369 / 0429 (zip < 9: SUID bits, symlink
+      # targets and permissions through symlinks, abort on a large symlink
+      # entry). All four live in ZipArchive::extract / ZipStreamReader::extract,
+      # and nothing in the tree reaches them with untrusted input:
+      #   - our own zip 8 (Overleaf import, overleaf.rs::extract_zip) walks
+      #     entries by hand with symlink rejection, enclosed_name +
+      #     sanitize_relative and size caps; project export only writes;
+      #   - harper-core reads its weirpack archives in memory, no extract;
+      #   - tauri-plugin-updater 2.10 (zip 4) extracts only a zip-wrapped
+      #     Windows installer, and only after verify_signature passes;
+      #   - zip 7 sits behind harper-pos-utils -> burn -> candle-core, which no
+      #     target compiles (`cargo tree --target all` finds no path).
+      # Owner: Marek Sokol. Review by: 2027-02-28.
+      # Exit: harper-core depends on zip >= 9 (3.0.0 still pins ^8.6) AND the
+      # direct zip dependency plus tauri-plugin-updater (2.14.1+, which needs
+      # tauri >= 2.12) are on zip 9.
       - name: Cargo audit
         working-directory: app/src-tauri
-        run: cargo audit
+        run: >-
+          cargo audit
+          --ignore RUSTSEC-2026-0367
+          --ignore RUSTSEC-2026-0368
+          --ignore RUSTSEC-2026-0369
+          --ignore RUSTSEC-2026-0429
 
   rust:
     # Test on Linux AND Windows: cfg(windows)-gated paths (the compile
