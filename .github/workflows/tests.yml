@@ -6,11 +6,19 @@
 
 name: Tests
 
+# The docs site is a separate npm project with its own CI (docs-ci.yml), so a
+# docs-only change has nothing for this suite to catch.
 on:
   push:
     branches: [main]
+    paths-ignore:
+      - 'docs/**'
+      - '.github/workflows/docs-*.yml'
   pull_request:
     branches: [main]
+    paths-ignore:
+      - 'docs/**'
+      - '.github/workflows/docs-*.yml'
 
 concurrency:
   group: tests-${{ github.ref }}

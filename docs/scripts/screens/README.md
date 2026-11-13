@@ -18,7 +18,7 @@ filters the loop trim needs.
 
 ## Re-capturing
 
-1. Start the app frontend: `npm run dev` in `../typeward` (serves on port 1420).
+1. Start the app frontend: `npm run dev` at the repository root (serves on port 1420).
 2. `node scripts/screens/make-pdf.mjs` -- regenerates the sample compiled PDF.
 3. `node scripts/screens/capture.mjs shots` -- screenshots into `out/`.
 4. `node scripts/screens/capture.mjs videos` -- raw clip recordings into `out/`.

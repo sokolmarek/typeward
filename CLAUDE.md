@@ -18,6 +18,8 @@ cargo test --manifest-path src-tauri/Cargo.toml
 
 npm run fetch:tectonic       # per-host: Tectonic sidecar into src-tauri/binaries/ (gitignored)
 npm run release -- <x.y.z>   # bump every version source, commit, tag. Add --dry-run to preview
+
+npm --prefix docs run build  # docs site: its own npm project (npm ci there first); astro build + link validation
 ```
 
 Use **npm**, never pnpm or yarn.
@@ -51,6 +53,7 @@ Two per-host gotchas. `fetch-tectonic.mjs` downloads the **musl** static binary 
 | `src-tauri/src/` | Rust: IPC commands, compile, LSP host, security boundaries |
 | `bench/` | Long-document benchmark harness (see `bench/README.md`) |
 | `scripts/` | Build, release, and test-harness scripts |
+| `docs/` | User documentation site (Astro Starlight, its own npm project), deployed to docs.typeward.com by `.github/workflows/docs-deploy.yml`. `docs/STYLE.md` is its writing guide |
 
 Deeper notes load automatically when you work in these directories: `src/CLAUDE.md`, `src-tauri/CLAUDE.md`, `src/integrations/cloud/`, `src/integrations/references/`, `src/lib/visual/`. **Read the one for the area you are changing before changing it**; they carry the invariants that no test enforces.
 
@@ -66,9 +69,9 @@ Subagents in `.claude/agents/` (committed; the rest of `.claude/` is machine-loc
 
 ## Local trees
 
-`design_files/` is **repo content** as of 2026-09-03 (previously gitignored). It holds the HTML/CSS/JS prototypes and is the **source of truth for visuals**: read the source, do not render it in a browser, and treat JSX as React reference only, porting to idiomatic Solid. It is still untracked pending a first `git add`, so a fresh clone will not have it until that lands.
+`design_files/` is **repo content** as of 2026-09-03 (previously gitignored). It holds the HTML/CSS/JS prototypes and is the **source of truth for visuals**: read the source, do not render it in a browser, and treat JSX as React reference only, porting to idiomatic Solid.
 
-`design/`, `docs/` and `plan.md` remain gitignored notes on the maintainer's machine, **not repo content**. Most sessions and every fresh clone will not have them, so check before citing one and never make a task depend on reading one. Never commit them and never `git add -f` them. When absent, the shipped code plus these `CLAUDE.md` files are the source of truth: say so rather than guessing at what a spec would have said. `design/` holds the living UI/UX specs and should be updated alongside any visible change.
+`design/`, `notes/` and `plan.md` remain gitignored notes on the maintainer's machine, **not repo content**. Most sessions and every fresh clone will not have them, so check before citing one and never make a task depend on reading one. Never commit them and never `git add -f` them. When absent, the shipped code plus these `CLAUDE.md` files are the source of truth: say so rather than guessing at what a spec would have said. `design/` holds the living UI/UX specs and should be updated alongside any visible change.
 
 ## Cross-cutting traps
 

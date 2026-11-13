@@ -47,8 +47,9 @@ tsconfig.tsbuildinfo
 *.tsbuildinfo
 
 # Working notes and living UI/UX specs. Kept on disk as the local source of
-# truth for visuals and phase history, but out of the public repo.
-docs/
+# truth for visuals and phase history, but out of the public repo. (docs/ is
+# the published documentation site and is repo content.)
+notes/
 design/
 
 # Third-party visual reference shots and generated image explorations. The rest

@@ -1,8 +1,10 @@
 # Typeward Docs
 
-Documentation site for [Typeward](https://typeward.com), the open-source LaTeX and Typst editor ([source and releases](https://github.com/typeward/typeward), MIT with the Commons Clause). Built with [Astro Starlight](https://starlight.astro.build). Deployed to https://docs.typeward.com via GitHub Pages on every push to `main`.
+Documentation site for [Typeward](https://typeward.com), the open-source LaTeX and Typst editor ([source and releases](https://github.com/sokolmarek/typeward), MIT with the Commons Clause). Built with [Astro Starlight](https://starlight.astro.build). Deployed to https://docs.typeward.com via GitHub Pages on every push to `main` that touches `docs/` (`.github/workflows/docs-deploy.yml` at the repository root; `docs-ci.yml` checks pull requests).
 
 ## Working on the docs
+
+The site is its own npm project, separate from the app. Run these from this `docs/` folder:
 
 ```
 npm install
