@@ -117,7 +117,7 @@ export const CloneDialog: Component<CloneDialogProps> = (props) => {
           onKeyDown={(e) => {
             if (e.key === "Enter" && !e.isComposing && !busy() && url().trim()) void handleClone();
           }}
-          placeholder="https://github.com/typeward/typeward.git"
+          placeholder="https://github.com/sokolmarek/typeward.git"
           autofocus
         />
 

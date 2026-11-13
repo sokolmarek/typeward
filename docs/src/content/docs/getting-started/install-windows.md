@@ -15,7 +15,7 @@ This guide installs Typeward on Windows and ends with the app running. For anoth
 
 ## Download and install
 
-1. On the [Typeward releases page](https://github.com/typeward/typeward/releases), download `Typeward_<version>_x64-setup.exe` for an Intel or AMD machine, or `Typeward_<version>_arm64-setup.exe` for an ARM machine. Throughout this page, `<version>` stands for the release number in the filename, for example `0.1.0`.
+1. On the [Typeward releases page](https://github.com/sokolmarek/typeward/releases), download `Typeward_<version>_x64-setup.exe` for an Intel or AMD machine, or `Typeward_<version>_arm64-setup.exe` for an ARM machine. Throughout this page, `<version>` stands for the release number in the filename, for example `0.1.0`.
 2. Verify the file with the checksum and provenance checks in [Verify your download](#verify-your-download).
 3. Run the installer. It installs for the current user and needs no administrator rights, and [Windows SmartScreen](#windows-smartscreen) warns about it on the way.
 4. Launch Typeward from the Start menu.
@@ -38,7 +38,7 @@ Typeward builds carry no code signature, so a checksum and a provenance attestat
 3. Verify the build provenance attestation with the [GitHub CLI](https://cli.github.com/):
 
    ```powershell
-   gh attestation verify .\Typeward_<version>_x64-setup.exe --repo typeward/typeward
+   gh attestation verify .\Typeward_<version>_x64-setup.exe --repo sokolmarek/typeward
    ```
 
 If the hashes differ, delete the file and download it again. Never run it.
@@ -47,7 +47,7 @@ If the hashes differ, delete the file and download it again. Never run it.
 In Git Bash or WSL, `sha256sum -c SHA256SUMS --ignore-missing` does the same comparison in one step and prints `OK` for each file that matches.
 :::
 
-A matching hash proves the file was not corrupted or swapped in transit. The attestation proves the installer came out of the release workflow in the [typeward/typeward](https://github.com/typeward/typeward) repository, rather than being assembled somewhere else.
+A matching hash proves the file was not corrupted or swapped in transit. The attestation proves the installer came out of the release workflow in the [sokolmarek/typeward](https://github.com/sokolmarek/typeward) repository, rather than being assembled somewhere else.
 
 Each release repeats both checks in a "Verify your download" section of its notes, and a section on code signing saying that SmartScreen warns.
 
@@ -76,7 +76,7 @@ Typeward checks for updates on its own. About ten seconds after launch, a releas
 
 To update by hand instead:
 
-1. On the [Typeward releases page](https://github.com/typeward/typeward/releases), download the installer for your architecture.
+1. On the [Typeward releases page](https://github.com/sokolmarek/typeward/releases), download the installer for your architecture.
 2. Verify it with the steps in [Verify your download](#verify-your-download).
 3. Run the installer over your existing installation.
 

@@ -6,7 +6,7 @@
 
 **A LaTeX and Typst editor that runs on your machine. No account, no server, no paid tier.**
 
-[![Tests](https://github.com/typeward/typeward/actions/workflows/tests.yml/badge.svg)](https://github.com/typeward/typeward/actions/workflows/tests.yml)
+[![Tests](https://github.com/sokolmarek/typeward/actions/workflows/tests.yml/badge.svg)](https://github.com/sokolmarek/typeward/actions/workflows/tests.yml)
 [![License: MIT + Commons Clause](https://img.shields.io/badge/License-MIT%20%2B%20Commons%20Clause-blue.svg)](LICENSE)
 [![Platforms](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-8250df.svg)](#install)
 [![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](#contributing)
@@ -34,16 +34,16 @@ use your own credentials.
 ## Install
 
 Version 0.1.0 is the first public beta. Grab the installer for your system, or
-browse [all releases](https://github.com/typeward/typeward/releases).
+browse [all releases](https://github.com/sokolmarek/typeward/releases).
 
 | System | Architecture | Installer |
 | --- | --- | --- |
-| Windows 10 and 11 | x86_64 | [`Typeward_0.1.0_x64-setup.exe`](https://github.com/typeward/typeward/releases/download/v0.1.0/Typeward_0.1.0_x64-setup.exe) |
-| Windows 10 and 11 | ARM64 | [`Typeward_0.1.0_arm64-setup.exe`](https://github.com/typeward/typeward/releases/download/v0.1.0/Typeward_0.1.0_arm64-setup.exe) |
-| macOS 13.3+ | Apple Silicon | [`Typeward_0.1.0_aarch64.dmg`](https://github.com/typeward/typeward/releases/download/v0.1.0/Typeward_0.1.0_aarch64.dmg) |
-| macOS 13.3+ | Intel | [`Typeward_0.1.0_x64.dmg`](https://github.com/typeward/typeward/releases/download/v0.1.0/Typeward_0.1.0_x64.dmg) |
-| Linux, glibc 2.35+ | x86_64 | [`.deb`](https://github.com/typeward/typeward/releases/download/v0.1.0/Typeward_0.1.0_amd64.deb), [`.rpm`](https://github.com/typeward/typeward/releases/download/v0.1.0/Typeward-0.1.0-1.x86_64.rpm), [`AppImage`](https://github.com/typeward/typeward/releases/download/v0.1.0/Typeward_0.1.0_amd64.AppImage) |
-| Linux, glibc 2.35+ | ARM64 | [`.deb`](https://github.com/typeward/typeward/releases/download/v0.1.0/Typeward_0.1.0_arm64.deb), [`.rpm`](https://github.com/typeward/typeward/releases/download/v0.1.0/Typeward-0.1.0-1.aarch64.rpm), [`AppImage`](https://github.com/typeward/typeward/releases/download/v0.1.0/Typeward_0.1.0_aarch64.AppImage) |
+| Windows 10 and 11 | x86_64 | [`Typeward_0.1.0_x64-setup.exe`](https://github.com/sokolmarek/typeward/releases/download/v0.1.0/Typeward_0.1.0_x64-setup.exe) |
+| Windows 10 and 11 | ARM64 | [`Typeward_0.1.0_arm64-setup.exe`](https://github.com/sokolmarek/typeward/releases/download/v0.1.0/Typeward_0.1.0_arm64-setup.exe) |
+| macOS 13.3+ | Apple Silicon | [`Typeward_0.1.0_aarch64.dmg`](https://github.com/sokolmarek/typeward/releases/download/v0.1.0/Typeward_0.1.0_aarch64.dmg) |
+| macOS 13.3+ | Intel | [`Typeward_0.1.0_x64.dmg`](https://github.com/sokolmarek/typeward/releases/download/v0.1.0/Typeward_0.1.0_x64.dmg) |
+| Linux, glibc 2.35+ | x86_64 | [`.deb`](https://github.com/sokolmarek/typeward/releases/download/v0.1.0/Typeward_0.1.0_amd64.deb), [`.rpm`](https://github.com/sokolmarek/typeward/releases/download/v0.1.0/Typeward-0.1.0-1.x86_64.rpm), [`AppImage`](https://github.com/sokolmarek/typeward/releases/download/v0.1.0/Typeward_0.1.0_amd64.AppImage) |
+| Linux, glibc 2.35+ | ARM64 | [`.deb`](https://github.com/sokolmarek/typeward/releases/download/v0.1.0/Typeward_0.1.0_arm64.deb), [`.rpm`](https://github.com/sokolmarek/typeward/releases/download/v0.1.0/Typeward-0.1.0-1.aarch64.rpm), [`AppImage`](https://github.com/sokolmarek/typeward/releases/download/v0.1.0/Typeward_0.1.0_aarch64.AppImage) |
 
 See [Supported systems](#supported-systems) for which distributions each Linux
 package covers and for the two platform caveats (WebView2 on Windows, and no
@@ -55,7 +55,7 @@ published with the release:
 
 ```
 sha256sum -c SHA256SUMS --ignore-missing
-gh attestation verify <file> --repo typeward/typeward
+gh attestation verify <file> --repo sokolmarek/typeward
 ```
 
 The second command checks GitHub's build provenance, proving the file was built

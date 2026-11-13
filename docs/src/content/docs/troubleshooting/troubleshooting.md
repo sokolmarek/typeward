@@ -281,7 +281,7 @@ Nothing about the crash is recorded or transmitted. Typeward has no crash report
 
 ## Still stuck
 
-Open an issue at [github.com/typeward/typeward/issues](https://github.com/typeward/typeward/issues). Typeward sends nothing on its own, so this is something you write in your browser, and you decide exactly what goes in it.
+Open an issue at [github.com/sokolmarek/typeward/issues](https://github.com/sokolmarek/typeward/issues). Typeward sends nothing on its own, so this is something you write in your browser, and you decide exactly what goes in it.
 
 Collect these first:
 

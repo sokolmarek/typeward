@@ -38,7 +38,7 @@ Optional integrations use your own credentials. Zotero, Mendeley, a WebDAV serve
 
 ## Open source
 
-Typeward is licensed under the MIT License with the Commons Clause condition. You may use it for anything including commercial work, read the source, modify it, fork it, and redistribute it free of charge. The one right the clause withholds is selling Typeward itself. The source, the issue tracker, and the installers for Windows, macOS, and Linux all live in the [Typeward repository](https://github.com/typeward/typeward), and the current release is [v0.1.0](https://github.com/typeward/typeward/releases), published as a first public beta. You can also build the app yourself. See [Build from source](/getting-started/build-from-source/).
+Typeward is licensed under the MIT License with the Commons Clause condition. You may use it for anything including commercial work, read the source, modify it, fork it, and redistribute it free of charge. The one right the clause withholds is selling Typeward itself. The source, the issue tracker, and the installers for Windows, macOS, and Linux all live in the [Typeward repository](https://github.com/sokolmarek/typeward), and the current release is [v0.1.0](https://github.com/sokolmarek/typeward/releases), published as a first public beta. You can also build the app yourself. See [Build from source](/getting-started/build-from-source/).
 
 For the license, the third-party notices, and how to contribute, see [License and third-party components](/reference/license/).
 

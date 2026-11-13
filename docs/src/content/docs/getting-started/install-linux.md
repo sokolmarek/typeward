@@ -26,7 +26,7 @@ Every release attaches three package formats, each built for x86_64 and for ARM6
 
 Every asset carries the release number in its file name, so `<version>` throughout this page stands for that number, for example `0.1.0`. Linux is one build per architecture rather than one per distribution, and the `.rpm` name uses hyphens and a release suffix where the other two use underscores.
 
-1. On the [Typeward releases page](https://github.com/typeward/typeward/releases), download the package for your distribution and architecture.
+1. On the [Typeward releases page](https://github.com/sokolmarek/typeward/releases), download the package for your distribution and architecture.
 2. Verify the file with the checksum and provenance checks in [Verify your download](#verify-your-download).
 3. Install the package with the steps for its format: [Run the AppImage](#run-the-appimage), [Install the Debian package](#install-the-debian-package), or [Install the RPM package](#install-the-rpm-package).
 
@@ -73,7 +73,7 @@ If a file fails, delete it and download it again. Never run it.
 Each asset also carries a GitHub build-provenance attestation. With the [GitHub CLI](https://cli.github.com/) installed, this command confirms the file came out of the release workflow in the Typeward source repository:
 
 ```sh
-gh attestation verify Typeward_<version>_amd64.AppImage --repo typeward/typeward
+gh attestation verify Typeward_<version>_amd64.AppImage --repo sokolmarek/typeward
 ```
 
 ## Unsigned packages
@@ -111,7 +111,7 @@ Typeward checks for updates on its own. About ten seconds after launch, a releas
 
 To update by hand instead:
 
-1. Download the newer package from the [Typeward releases page](https://github.com/typeward/typeward/releases).
+1. Download the newer package from the [Typeward releases page](https://github.com/sokolmarek/typeward/releases).
 2. Install it the way you installed the first one.
 
 Apt and your RPM package manager upgrade the existing install in place, and an AppImage takes the update when you overwrite the file. Your projects, settings, and version history are untouched by any of this. See [How updates work](/reference/updates/).

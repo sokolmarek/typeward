@@ -15,7 +15,7 @@ Typeward has none of the following.
 | Crash reporting | The crash-submission path, the panic log, and their **Settings** section were removed on 2026-08-13. When something fails, Typeward writes a line to the developer console and shows a toast. Nothing is written to disk, and nothing is transmitted. |
 | An account | There is nothing to sign in to. See [License and third-party components](/reference/license/). |
 | An install or device identifier | Nothing identifies your copy of Typeward. The update check is the only request Typeward starts on its own, and it carries no identifier. See [Update checks](#update-checks). |
-| A feedback endpoint | There is no in-app feedback form and no bug-report submitter. You file an issue yourself at [the Typeward repository](https://github.com/typeward/typeward). |
+| A feedback endpoint | There is no in-app feedback form and no bug-report submitter. You file an issue yourself at [the Typeward repository](https://github.com/sokolmarek/typeward). |
 
 ## Outbound requests
 
@@ -43,11 +43,11 @@ Typeward can also hand an address to your default browser, which is a handoff to
 
 ## Update checks
 
-The update check is the only request Typeward starts without you asking. It is a plain HTTPS `GET` of `latest.json`, a manifest attached to the newest release in the `typeward/typeward` repository on GitHub. It carries no identifier of any kind: no account, no install id, and no report of the version you are on. GitHub sees a download of a public file, as it would for anyone fetching that address.
+The update check is the only request Typeward starts without you asking. It is a plain HTTPS `GET` of `latest.json`, a manifest attached to the newest release in the `sokolmarek/typeward` repository on GitHub. It carries no identifier of any kind: no account, no install id, and no report of the version you are on. GitHub sees a download of a public file, as it would for anyone fetching that address.
 
 The check runs about ten seconds after launch while **Check automatically** is on, which is the default, and it runs on demand whenever you select **Check now** under **Settings → About → Check for updates**. Turning **Check automatically** off stops the launch check, and the toggle is stored locally with the rest of your preferences.
 
-Finding a newer release downloads nothing. Typeward raises the **Update available** dialog and waits, and the download starts only when you select **Install and relaunch**. New versions are also available by hand from [the Typeward releases page](https://github.com/typeward/typeward/releases). See [How updates work](/reference/updates/).
+Finding a newer release downloads nothing. Typeward raises the **Update available** dialog and waits, and the download starts only when you select **Install and relaunch**. New versions are also available by hand from [the Typeward releases page](https://github.com/sokolmarek/typeward/releases). See [How updates work](/reference/updates/).
 
 ## What an AI request contains
 

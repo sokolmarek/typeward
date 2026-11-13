@@ -3,7 +3,7 @@ title: License and third-party components
 description: "Typeward is MIT-licensed with the Commons Clause: what the license grants, what it withholds, and the third-party code it bundles."
 ---
 
-This page explains what the Typeward license lets you do, what it withholds, where the source and the installers come from, and which third-party components ship inside the application. Typeward is licensed under the MIT License with the Commons Clause condition, and the whole application lives in one repository, [typeward/typeward on GitHub](https://github.com/typeward/typeward). For the network requests Typeward can make, see [Privacy and network behavior](/reference/privacy-and-network/).
+This page explains what the Typeward license lets you do, what it withholds, where the source and the installers come from, and which third-party components ship inside the application. Typeward is licensed under the MIT License with the Commons Clause condition, and the whole application lives in one repository, [sokolmarek/typeward on GitHub](https://github.com/sokolmarek/typeward). For the network requests Typeward can make, see [Privacy and network behavior](/reference/privacy-and-network/).
 
 :::note
 The `LICENSE` file in the repository root is the authoritative text, and this page is a summary rather than legal advice.
@@ -47,8 +47,8 @@ One repository holds the source, the issue tracker, and the releases.
 
 | What | Where |
 | --- | --- |
-| Source, issues, and pull requests | [github.com/typeward/typeward](https://github.com/typeward/typeward) |
-| Installers, release notes, and checksums | [github.com/typeward/typeward/releases](https://github.com/typeward/typeward/releases) |
+| Source, issues, and pull requests | [github.com/sokolmarek/typeward](https://github.com/sokolmarek/typeward) |
+| Installers, release notes, and checksums | [github.com/sokolmarek/typeward/releases](https://github.com/sokolmarek/typeward/releases) |
 
 The release workflow in that repository produces every installer from a tagged commit. The current release is v0.1.0, published on 4 September 2026 and described in its notes as a first public beta.
 
@@ -60,7 +60,7 @@ Every release carries two checks you can run against the file you downloaded.
 
 `SHA256SUMS` is a file attached to the release, listing the checksum of every asset in it. The release notes carry a "Verify your download" section with the command, and the per-platform commands are on [Install on Windows](/getting-started/install-windows/), [Install on macOS](/getting-started/install-macos/), and [Install on Linux](/getting-started/install-linux/).
 
-GitHub attests each asset at build time. Running `gh attestation verify <file> --repo typeward/typeward` ties the file in your downloads folder to the workflow run and the tagged commit that produced it.
+GitHub attests each asset at build time. Running `gh attestation verify <file> --repo sokolmarek/typeward` ties the file in your downloads folder to the workflow run and the tagged commit that produced it.
 
 ## Known limitations
 
@@ -107,7 +107,7 @@ Three kinds of software sit outside the main dependency table.
 
 ## Contributions
 
-Issues and pull requests are welcome in [the Typeward repository](https://github.com/typeward/typeward).
+Issues and pull requests are welcome in [the Typeward repository](https://github.com/sokolmarek/typeward).
 
 `CLAUDE.md` in the repository root, mirrored as `AGENTS.md`, is the architecture guide. Before touching compilation, IPC, the outbound HTTP allowlist, or anything that handles a path coming from a project, read its "Architecture seams" and "Security invariants" sections.
 

@@ -3,7 +3,7 @@ title: Build from source
 description: Clone the Typeward source, install the prerequisites and the required Tectonic binary, run a development build, and produce installers for your platform.
 ---
 
-This guide shows you how to build Typeward from source, run a development window, and produce installers for your platform. To run Typeward without building it, install a [published release](https://github.com/typeward/typeward/releases) and follow [Install on Windows](/getting-started/install-windows/), [Install on macOS](/getting-started/install-macos/), or [Install on Linux](/getting-started/install-linux/). Build from source to audit the code in the [Typeward repository](https://github.com/typeward/typeward), run an unreleased change, contribute a fix, or target a platform no installer covers.
+This guide shows you how to build Typeward from source, run a development window, and produce installers for your platform. To run Typeward without building it, install a [published release](https://github.com/sokolmarek/typeward/releases) and follow [Install on Windows](/getting-started/install-windows/), [Install on macOS](/getting-started/install-macos/), or [Install on Linux](/getting-started/install-linux/). Build from source to audit the code in the [Typeward repository](https://github.com/sokolmarek/typeward), run an unreleased change, contribute a fix, or target a platform no installer covers.
 
 ## Before you start
 
@@ -34,7 +34,7 @@ sudo apt install -y libdbus-1-dev libwebkit2gtk-4.1-dev build-essential \
 Clone the repository and change into it.
 
 ```sh
-git clone https://github.com/typeward/typeward.git typeward
+git clone https://github.com/sokolmarek/typeward.git typeward
 cd typeward
 ```
 
@@ -134,7 +134,7 @@ Typeward bundles none of these tools, and the build needs none of them.
 
 ## Contribute a change
 
-File issues and pull requests in the [Typeward repository](https://github.com/typeward/typeward). `CLAUDE.md` in the repository root, mirrored as `AGENTS.md`, is the architecture guide. Read its "Architecture seams" and "Security invariants" sections before touching compilation, IPC, the outbound HTTP allowlist, or anything that handles a path coming from a project.
+File issues and pull requests in the [Typeward repository](https://github.com/sokolmarek/typeward). `CLAUDE.md` in the repository root, mirrored as `AGENTS.md`, is the architecture guide. Read its "Architecture seams" and "Security invariants" sections before touching compilation, IPC, the outbound HTTP allowlist, or anything that handles a path coming from a project.
 
 Every change must pass these checks before it lands, and CI runs all of them.
 

@@ -88,7 +88,7 @@ travel with it.
   packages (LaTeX under the LPPL, TeX and Computer Modern under Knuth's own
   terms, and others besides), all freely redistributable under TeX Live's own
   copying conditions. Those conditions ship as `LICENSE.TL` in
-  https://github.com/typeward/texlive-wasm, which is the authority for the
+  https://github.com/sokolmarek/texlive-wasm, which is the authority for the
   exact set of packages a given asset download pulls in. The
   `@typeward/texlive-wasm` wrapper itself is MIT.
 

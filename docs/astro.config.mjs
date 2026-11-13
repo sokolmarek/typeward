@@ -40,9 +40,9 @@ export default defineConfig({
 			// The adaptive SVG carries both themes and switches on
 			// prefers-color-scheme, exactly as the app's index.html does.
 			favicon: '/favicon-adaptive.svg',
-			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/typeward' }],
+			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/sokolmarek/typeward' }],
 			editLink: {
-				baseUrl: 'https://github.com/typeward/docs/edit/main/',
+				baseUrl: 'https://github.com/sokolmarek/typeward/edit/main/docs/',
 			},
 			customCss: ['./src/styles/custom.css'],
 			// Starlight emits twitter:card summary_large_image on every page but

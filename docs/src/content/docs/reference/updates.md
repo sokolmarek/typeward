@@ -15,7 +15,7 @@ With the toggle off, no automatic check runs, and manual checks from **Check now
 
 ## What a check sends
 
-A check is a plain HTTPS `GET` for `latest.json`, a manifest attached to the newest release in the `typeward/typeward` repository on `github.com`. No account, no install identifier, no telemetry. The hint under **Check automatically** states the same guarantee: "Shortly after launch, look for a newer release and prompt you to install it. The check is a plain HTTPS GET to GitHub with no identifiers, and updates never install without your confirmation." See [Privacy and network behavior](/reference/privacy-and-network/).
+A check is a plain HTTPS `GET` for `latest.json`, a manifest attached to the newest release in the `sokolmarek/typeward` repository on `github.com`. No account, no install identifier, no telemetry. The hint under **Check automatically** states the same guarantee: "Shortly after launch, look for a newer release and prompt you to install it. The check is a plain HTTPS GET to GitHub with no identifiers, and updates never install without your confirmation." See [Privacy and network behavior](/reference/privacy-and-network/).
 
 ## The update prompt
 
@@ -46,7 +46,7 @@ Should a release ever omit the artifact matching how you installed, a check says
 
 ## Manual installation
 
-Updating by hand stays available whether or not the updater is on. Download the newest installer from the [Typeward releases page](https://github.com/typeward/typeward/releases), verify it, and run it over the installation you have. The per-platform steps are on [Install on Windows](/getting-started/install-windows/), [Install on macOS](/getting-started/install-macos/), and [Install on Linux](/getting-started/install-linux/).
+Updating by hand stays available whether or not the updater is on. Download the newest installer from the [Typeward releases page](https://github.com/sokolmarek/typeward/releases), verify it, and run it over the installation you have. The per-platform steps are on [Install on Windows](/getting-started/install-windows/), [Install on macOS](/getting-started/install-macos/), and [Install on Linux](/getting-started/install-linux/).
 
 Each release carries installers for Windows, macOS, and Linux, a `SHA256SUMS` file listing every asset, and the changelog for that version. Verify the download against `SHA256SUMS` before you run it.
 

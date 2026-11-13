@@ -14,7 +14,7 @@ This guide installs Typeward on macOS and ends with the app running. To build Ty
 ## Download and install
 
 1. Open **Apple menu → About This Mac** and read the chip or processor line.
-2. On the [Typeward releases page](https://github.com/typeward/typeward/releases), download `Typeward_<version>_aarch64.dmg` for an Apple Silicon Mac, or `Typeward_<version>_x64.dmg` for an Intel Mac. Throughout this page, `<version>` stands for the release number in the filename, for example `0.1.0`.
+2. On the [Typeward releases page](https://github.com/sokolmarek/typeward/releases), download `Typeward_<version>_aarch64.dmg` for an Apple Silicon Mac, or `Typeward_<version>_x64.dmg` for an Intel Mac. Throughout this page, `<version>` stands for the release number in the filename, for example `0.1.0`.
 3. Verify the file with the checksum and provenance checks in [Verify your download](#verify-your-download).
 4. Open the disk image.
 5. Drag **Typeward** into your **Applications** folder.
@@ -51,10 +51,10 @@ Compare the result with the line for that file in `SHA256SUMS`.
 A matching hash proves the file was not corrupted or swapped in transit. It does not prove who built it, because `SHA256SUMS` sits on the same page as the disk image. For that, verify the build provenance attestation with the [GitHub CLI](https://cli.github.com/):
 
 ```sh
-gh attestation verify Typeward_<version>_aarch64.dmg --repo typeward/typeward
+gh attestation verify Typeward_<version>_aarch64.dmg --repo sokolmarek/typeward
 ```
 
-The attestation confirms that the exact file you downloaded came out of the release workflow in the [typeward/typeward](https://github.com/typeward/typeward) repository, rather than from somewhere else.
+The attestation confirms that the exact file you downloaded came out of the release workflow in the [sokolmarek/typeward](https://github.com/sokolmarek/typeward) repository, rather than from somewhere else.
 
 ## Gatekeeper on first launch
 
@@ -93,7 +93,7 @@ Typeward checks for updates on its own. About ten seconds after launch, a releas
 
 To update by hand instead:
 
-1. Download the new disk image from the [Typeward releases page](https://github.com/typeward/typeward/releases).
+1. Download the new disk image from the [Typeward releases page](https://github.com/sokolmarek/typeward/releases).
 2. Verify it with the steps in [Verify your download](#verify-your-download).
 3. Drag **Typeward** into **Applications** again, replacing the old copy. Gatekeeper prompts once for that freshly downloaded copy.
 

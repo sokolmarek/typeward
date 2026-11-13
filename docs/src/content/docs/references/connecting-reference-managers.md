@@ -89,7 +89,7 @@ The row's own hint states the position: **Mendeley Desktop was discontinued in 2
 
 Mendeley is a confidential OAuth client, so the setup has two parts. You register an OAuth application at [dev.mendeley.com](https://dev.mendeley.com) with a redirect URL, and you paste that application's client secret into Typeward. Mendeley exposes one personal library (**My Library**) and its folders, nested the way you have them. Browsing a folder fetches its documents one by one and stops at 500 documents per folder.
 
-Sign-in completes only when the client secret you save belongs to the same Mendeley OAuth application as the client ID compiled into your copy of Typeward. If you [build from source](/getting-started/build-from-source/), that client ID is yours to set. Mendeley is the least exercised of the reference sources, and it is the only one whose upstream is winding down. Report a sign-in that never completes at [github.com/typeward/typeward](https://github.com/typeward/typeward).
+Sign-in completes only when the client secret you save belongs to the same Mendeley OAuth application as the client ID compiled into your copy of Typeward. If you [build from source](/getting-started/build-from-source/), that client ID is yours to set. Mendeley is the least exercised of the reference sources, and it is the only one whose upstream is winding down. Report a sign-in that never completes at [github.com/sokolmarek/typeward](https://github.com/sokolmarek/typeward).
 
 ### Save the redirect URL and the client secret
 

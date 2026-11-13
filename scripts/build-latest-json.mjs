@@ -7,7 +7,7 @@
 //   node scripts/build-latest-json.mjs \
 //     --dir <collected-artifacts-dir> \
 //     --version <x.y.z> \
-//     --base-url https://github.com/typeward/typeward/releases/download/v<x.y.z> \
+//     --base-url https://github.com/sokolmarek/typeward/releases/download/v<x.y.z> \
 //     --notes-file <path> \
 //     --expect windows-x86_64,darwin-aarch64 \
 //     --out latest.json
