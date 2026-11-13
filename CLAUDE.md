@@ -53,7 +53,7 @@ Two per-host gotchas. `fetch-tectonic.mjs` downloads the **musl** static binary 
 | `src-tauri/src/` | Rust: IPC commands, compile, LSP host, security boundaries |
 | `bench/` | Long-document benchmark harness (see `bench/README.md`) |
 | `scripts/` | Build, release, and test-harness scripts |
-| `docs/` | User documentation site (Astro Starlight, its own npm project), deployed to docs.typeward.com by `.github/workflows/docs-deploy.yml`. `docs/STYLE.md` is its writing guide |
+| `docs/` | User documentation site (Astro Starlight, its own npm project), deployed to typeward.com by `.github/workflows/docs-deploy.yml`. `docs/STYLE.md` is its writing guide |
 
 Deeper notes load automatically when you work in these directories: `src/CLAUDE.md`, `src-tauri/CLAUDE.md`, `src/integrations/cloud/`, `src/integrations/references/`, `src/lib/visual/`. **Read the one for the area you are changing before changing it**; they carry the invariants that no test enforces.
 

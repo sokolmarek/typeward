@@ -5,7 +5,7 @@ import starlightLinksValidator from 'starlight-links-validator';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://docs.typeward.com',
+	site: 'https://typeward.com',
 	// Pages removed in the open-source overhaul: settings sync via account no
 	// longer exists (cloud sync replaced it) and there are no tiers to compare.
 	// The licensing page moved with the v0.1.0 relicense (GPL-3.0-or-later to
@@ -50,11 +50,11 @@ export default defineConfig({
 			head: [
 				{
 					tag: 'meta',
-					attrs: { property: 'og:image', content: 'https://docs.typeward.com/og.png' },
+					attrs: { property: 'og:image', content: 'https://typeward.com/og.png' },
 				},
 				{
 					tag: 'meta',
-					attrs: { name: 'twitter:image', content: 'https://docs.typeward.com/og.png' },
+					attrs: { name: 'twitter:image', content: 'https://typeward.com/og.png' },
 				},
 				// Starlight's `favicon` option emits one link; the rest of the icon
 				// kit is declared here. The .ico is the fallback for anything that

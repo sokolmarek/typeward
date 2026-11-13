@@ -1,6 +1,6 @@
 name: Deploy docs
 
-# Publishes docs/ to GitHub Pages (custom domain docs.typeward.com, set in the
+# Publishes docs/ to GitHub Pages (custom domain typeward.com, set in the
 # repo's Pages settings) whenever the site changes on main.
 on:
   push:
