@@ -1,6 +1,6 @@
 [package]
 name = "typeward"
-version = "0.1.0"
+version = "0.1.1"
 description = "Typeward — multiplatform editor for LaTeX and Typst"
 authors = ["Typeward"]
 edition = "2024"
